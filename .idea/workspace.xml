@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b81610d-bdfa-4e26-aaef-046c43736cf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/python-terminal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/runtests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/runtests.py" afterDir="false" />
-    </list>
+    <list default="true" id="9b81610d-bdfa-4e26-aaef-046c43736cf4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +29,13 @@
           <entry key="json" value="1" />
           <entry key="py" value="33" />
           <entry key="rst" value="2" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PLAIN_TEXT" value="13" />
           <entry key="Python" value="33" />
           <entry key="ReST" value="2" />
         </counts>
@@ -69,11 +65,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django/forms/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-738">
               <caret line="61" column="14" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/ref/forms/api.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1186" column="43" selection-start-line="1186" selection-start-column="43" selection-end-line="1186" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -121,6 +126,19 @@
               <item name="django-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="django-1" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django-1" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="ref" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django-1" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="ref" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -173,7 +191,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17163213" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17163213" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -185,7 +203,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" x="0" y="23" width="1600" height="837" id="Terminal" order="9" type="WINDOWED" visible="true" weight="0.29470673" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1600" height="837" id="Terminal" order="9" type="WINDOWED" visible="true" weight="0.29470673" />
       <window_info anchor="bottom" x="13" y="2" width="1573" height="813" id="Python Console" order="10" type="FLOATING" weight="0.32904148" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -379,6 +397,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-738">
           <caret line="61" column="14" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ref/forms/api.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1186" column="43" selection-start-line="1186" selection-start-column="43" selection-end-line="1186" selection-end-column="43" />
         </state>
       </provider>
     </entry>
