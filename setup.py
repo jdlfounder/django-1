@@ -32,7 +32,6 @@ an older version of Django:
 """.format(*(REQUIRED_PYTHON + CURRENT_PYTHON)))
     sys.exit(1)
 
-
 # Warn if we are installing over top of an existing installation. This can
 # cause issues where files that were deleted from a more recent Django are
 # still present in site-packages. See #18115.
@@ -51,11 +50,9 @@ if "install" in sys.argv:
             overlay_warning = True
             break
 
-
 EXCLUDE_FROM_PACKAGES = ['django.conf.project_template',
                          'django.conf.app_template',
                          'django.bin']
-
 
 # Dynamically calculate the version based on django.VERSION.
 version = __import__('django').get_version()
@@ -115,7 +112,6 @@ setup(
         'Tracker': 'https://code.djangoproject.com/',
     },
 )
-
 
 if overlay_warning:
     sys.stderr.write("""

@@ -22,7 +22,12 @@ from django.utils.deprecation import (
 )
 from django.utils.log import DEFAULT_LOGGING
 
+import locale
+
+locale.setlocale(locale.LC_ALL, 'zh_CN.UTF-8')
 try:
+    # import _locale
+    # _locale._getdefaultlocale = (lambda *args: ['zh_CN', 'utf8'])
     import MySQLdb
 except ImportError:
     pass
@@ -36,7 +41,8 @@ warnings.simplefilter('error', RemovedInDjango31Warning)
 # Make runtime warning errors to ensure no usage of error prone patterns.
 warnings.simplefilter("error", RuntimeWarning)
 # Ignore known warnings in test dependencies.
-warnings.filterwarnings("ignore", "'U' mode is deprecated", DeprecationWarning, module='docutils.io')
+warnings.filterwarnings("ignore", "'U' mode is deprecated", DeprecationWarning,
+                        module='docutils.io')
 
 RUNTESTS_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -50,7 +56,6 @@ tempfile.tempdir = os.environ['TMPDIR'] = TMPDIR
 
 # Removing the temporary TMPDIR.
 atexit.register(shutil.rmtree, TMPDIR)
-
 
 SUBDIRS_TO_SKIP = [
     'data',
@@ -97,9 +102,9 @@ def get_test_modules():
     for modpath, dirpath in discovery_paths:
         for f in os.listdir(dirpath):
             if ('.' not in f and
-                    os.path.basename(f) not in SUBDIRS_TO_SKIP and
-                    not os.path.isfile(f) and
-                    os.path.exists(os.path.join(dirpath, f, '__init__.py'))):
+                os.path.basename(f) not in SUBDIRS_TO_SKIP and
+                not os.path.isfile(f) and
+                os.path.exists(os.path.join(dirpath, f, '__init__.py'))):
                 modules.append((modpath, f))
     return modules
 
@@ -116,7 +121,8 @@ def setup(verbosity, test_labels, parallel):
         test_labels_set.add('.'.join(bits))
 
     if verbosity >= 1:
-        msg = "Testing against Django installed in '%s'" % os.path.dirname(django.__file__)
+        msg = "Testing against Django installed in '%s'" % os.path.dirname(
+            django.__file__)
         max_parallel = default_test_processes() if parallel == 0 else parallel
         if max_parallel > 1:
             msg += " with up to %d processes" % max_parallel
@@ -126,6 +132,7 @@ def setup(verbosity, test_labels, parallel):
     def no_available_apps(self):
         raise Exception("Please define available_apps in TransactionTestCase "
                         "and its subclasses.")
+
     TransactionTestCase.available_apps = property(no_available_apps)
     TestCase.available_apps = None
 
@@ -253,13 +260,15 @@ class ActionSelenium(argparse.Action):
     """
     Validate the comma-separated list of requested browsers.
     """
+
     def __call__(self, parser, namespace, values, option_string=None):
         browsers = values.split(',')
         for browser in browsers:
             try:
                 SeleniumTestCaseBase.import_webdriver(browser)
             except ImportError:
-                raise argparse.ArgumentError(self, "Selenium browser specification '%s' is not valid." % browser)
+                raise argparse.ArgumentError(self,
+                                             "Selenium browser specification '%s' is not valid." % browser)
         setattr(namespace, self.dest, browsers)
 
 
@@ -379,7 +388,7 @@ def paired_tests(paired_test, options, test_labels, parallel):
 
     for i, label in enumerate(test_labels):
         print('***** %d of %d: Check test pairing with %s' % (
-              i + 1, len(test_labels), label))
+            i + 1, len(test_labels), label))
         failures = subprocess.call(subprocess_args + [label, paired_test])
         if failures:
             print('***** Found problem pair with %s' % label)
